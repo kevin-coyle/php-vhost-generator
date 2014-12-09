@@ -1,6 +1,6 @@
 {
-    "name": "coyledesign/centos-vhost-generator",
-    "description": "Creates a new vhost on centos",
+    "name": "coyledesign/vhost-generator",
+    "description": "Creates a new Apache vhost file.",
     "require-dev": {
         "phpunit/phpunit": "~4.4"
     },

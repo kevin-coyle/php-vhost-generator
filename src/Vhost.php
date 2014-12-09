@@ -20,6 +20,13 @@ class Vhost {
         return $this->domain;
     }
 
+    /**
+     * Creates a new VHost object.
+     * @param $name The name of the VHost.
+     * @param $vHostDir The Directory of the VHost.
+     * @param $hostDir The Location where the websites are stored.
+     * @throws Exception
+     */
     public function __construct($name, $vHostDir, $hostDir) {
         $name = preg_replace('/\s+/', '', $name);
         $this->name = htmlspecialchars(strtolower($name));
