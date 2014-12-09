@@ -1,4 +1,4 @@
-<?php namespace Vhost;
+<?php namespace VhostGenerator;
 
 
 /**
