@@ -1,5 +1,5 @@
 <?php namespace VHostGenerator;
-
+use \Exception as Exception;
 
 /**
  * @file
