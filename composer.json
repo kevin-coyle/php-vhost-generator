@@ -1,18 +1,19 @@
 {
     "name": "coyledesign/vhost-generator",
-    "description": "Creates a new Apache vhost file.",
+    "description": "Creates a VHost File for Apache",
     "require-dev": {
         "phpunit/phpunit": "~4.4"
     },
-    "license": "GNU GPL v2",
+    "license": "GPL",
     "authors": [
         {
             "name": "kevincoyle",
             "email": "kevin.coyle@drutek.co.uk"
         }
     ],
-    "require": {},
-    "psr-0": {
-        "VHostGenerator": "src/"
+    "autoload": {
+        "psr-0": {
+            "VHostGenerator": "src/"
+        }
     }
 }
