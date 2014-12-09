@@ -14,5 +14,5 @@
     "require": {},
     "autoload": {
         "psr-4": {"VHost\\": "src"}
-    },
+    }
 }
