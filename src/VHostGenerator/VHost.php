@@ -1,8 +1,13 @@
-<?php namespace VHostGenerator; /**
+<?php namespace VHostGenerator;
+
+
+/**
  * @file
  * @author Kevin Coyle
  * Contains the VHost Class.
- */ class VHost {
+ */
+
+class VHost {
     private $name;
     private $vHostDir;
     private $domain;
@@ -14,6 +19,7 @@
     {
         return $this->domain;
     }
+
     /**
      * Creates a new VHost object.
      * @param $name The name of the VHost.
@@ -27,6 +33,7 @@
         $this->vHostDir = self::setVhostDir($vHostDir);
         $this->hostDir = $hostDir;
     }
+
     /**
      * Sets the Virtual Host Directory.
      * @param $vHostDir
@@ -38,6 +45,7 @@
         }
         throw new Exception('VHost Directory Does Not Exist');
     }
+
     /**
      * Lists all Vhost conf files that have been created.
      * @param string $VhostDir
@@ -51,6 +59,7 @@
         $files = array_diff(scandir($vHostDir), array('.', '..'));
         return $files;
     }
+
     /**
      * Creates the VHost File.
      * @param $name
@@ -71,9 +80,11 @@
                 Order allow,deny
                 Allow from all
               </Directory>
-            </VirtualHost> EOD;
+            </VirtualHost>
+EOD;
         file_put_contents("{$vHostDir}/{$name}.conf", $output . PHP_EOL);
     }
+
     /**
      * Generates a unique name that can be used for the domain name.
      * @return string
@@ -95,4 +106,5 @@
         }
         return file_get_contents($vHostDir . '/' . $name . '.conf');
     }
+
 }
