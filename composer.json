@@ -12,8 +12,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "VHostGenerator": "src/"
+        "psr-4": {
+            "VHostGenerator\\": "src/VHostGenerator"
         }
     }
 }
