@@ -3,7 +3,7 @@
  * @file
  * Test file for the VHost Class.
  */
-use VhostGenerator\Vhost as VHost;
+use VHostGenerator\VHost as VHost;
 class VhostTest extends PHPUnit_Framework_TestCase{
     private $vHostDir;
     private $name;
@@ -37,7 +37,7 @@ class VhostTest extends PHPUnit_Framework_TestCase{
         $reflector = new ReflectionClass('\Vhost\Vhost');
         $reflector->getMethod('listVhosts');
 
-        $Vhost = new Vhost('', $vhostDir, $hostDir);
+        $Vhost = new VHost('', $vhostDir, $hostDir);
         $Vhosts = $Vhost->listVhosts();
         $this->assertTrue(is_array($Vhosts));
     }
@@ -55,7 +55,7 @@ class VhostTest extends PHPUnit_Framework_TestCase{
         $name = $this->name;
         $hostDir = $this->hostDir;
 
-        $vHost = new Vhost($name, $vHostDir, $hostDir);
+        $vHost = new VHost($name, $vHostDir, $hostDir);
         $vHost->createVhostFile($name, $vHostDir);
         $vHostFile = $vHost->getVhost();
         $domain = $vHost->getDomain();

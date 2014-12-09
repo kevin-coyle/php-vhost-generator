@@ -1,4 +1,4 @@
-<?php namespace VhostGenerator;
+<?php namespace VHostGenerator;
 
 
 /**
@@ -7,7 +7,7 @@
  * Contains the VHost Class.
  */
 
-class Vhost {
+class VHost {
     private $name;
     private $vHostDir;
     private $domain;
