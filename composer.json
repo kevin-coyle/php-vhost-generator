@@ -11,5 +11,8 @@
             "email": "kevin.coyle@drutek.co.uk"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {"VHost\\": "src"}
+    },
 }
